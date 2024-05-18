@@ -44,7 +44,7 @@ navigator.geolocation.watchPosition(async (position) => {
       });
      
       document.getElementById('city').innerText 
-      = geoData.response.features[0].properties.county;
+      = geoData.response.features[0].properties.name;
 
     }
 
