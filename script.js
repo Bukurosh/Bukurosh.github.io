@@ -11,17 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
     searchQuery = "",
     filter = null
   ) {
-    // limit=-1 kthen gjithe elementet
+  
     let url = requestUrl;
 
     console.log(url);
 
     if (searchQuery) {
-      url += `?search=${searchQuery}`; // ne search kthe te gjithe elementet, pa limit
+      url += `?search=${searchQuery}`;
     } else if (filter) {
-      url += `?${filter.category}=${ filter.value}`; // ne filter kthe te gjithe elementet, pa limit
+      url += `?${filter.category}=${ filter.value}`;
     } else {
-      url += `?limit=${limit}`; // nese skemi perdorur as search e as filter, atehere perdor limitin.
+      url += `?limit=${limit}`; 
     }
 
     console.log("url:", url);
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         animals.forEach((animal) => {
           if (showAnimal(animal, filter)) {
             showedProducts = true;
-            // Ky funksionalitet eshte shtuar meqenese "freetestapi" API nuk i kthente rezultatet e filtruara nga serveri.
+           
             buildElement(animal);
           }
         });
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
           filter.value.trim().toLowerCase() !=
           (animal.origin || "").trim().toLowerCase()
         ) {
-          // meqe birds nuk kane origjine
+         
           return false;
         }
         break;
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const showAllButton = document.getElementById("showAllButton");
   showAllButton.addEventListener("click", function () {
-    fetchAndDisplayAnimals(currentRequest, -1); // -1 eshte perdorur per te kthyer gjithe elementet
+    fetchAndDisplayAnimals(currentRequest, -1);
   });
 
   const showDogsButton = document.getElementById("dogs");
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log(filter);
 
-      fetchAndDisplayAnimals(currentRequest, -1, "", filter); // -1 eshte perdorur per te kthyer gjithe elementet
+      fetchAndDisplayAnimals(currentRequest, -1, "", filter); 
     });
   }
 
@@ -238,14 +238,12 @@ document.getElementById("birdsNav").addEventListener("click", function () {
   document.getElementById("birds").click();
 });
 
-// Logjika e "Scroll To Top"
 let goToTopBtn = document.getElementById("goToTopBtn");
 
 window.onscroll = function () {
   scrollFunction();
 };
 
-// butoni aktivizohet ne momentin kur behet scroll me shume se 100px
 function scrollFunction() {
   if (
    
@@ -257,7 +255,6 @@ function scrollFunction() {
   }
 }
 
-// Kur klikohet butoni, behet smooth scroll ne kryefaqe
 goToTopBtn.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
