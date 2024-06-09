@@ -1,0 +1,173 @@
+.logo {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+}
+
+.card {
+  border: 1px solid orangered;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  height: 320px;
+  text-align: center;
+}
+
+.divider1 {
+  margin-bottom: 15px;
+  height: 0;
+  width: 100%;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.divider2 {
+  margin-top: 15px;
+  height: 0;
+  width: 100%;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.photo-container {
+  margin-top: 80px;
+}
+
+.principal-container {
+  display: flex;
+}
+
+.photo-container {
+  display: flex;
+  max-height: 350px;
+}
+
+.filter-section {
+  flex: 1;
+  max-width: 350px;
+  padding: 20px;
+}
+
+.column {
+  flex: 5;
+  padding: 0 20px;
+}
+
+#showAllButton {
+  height: 40px;
+  width: 100px;
+  margin-left: 50%;
+  margin-top: 2%;
+  border: none;
+  border-radius: 10px;
+}
+
+#animalModal {
+  text-align: center;
+}
+
+.modal-content {
+  height: 700px;
+  margin-left: 22%;
+}
+
+.custom-modal-dialog {
+  max-width: 500px;
+  width: 50%;
+}
+
+.item {
+  margin: 20px;
+  margin-right: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.brand-color {
+  color: orangered;
+}
+
+.pageName {
+  width: 300px;
+}
+
+#goToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 601px) {
+  .navBar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .column {
+    padding: 10px;
+  }
+
+  .card {
+    border: 1px solid orangered;
+    width: 220px;
+    height: 400px;
+    margin-left: 70px;
+  }
+
+  .divider1 {
+    display: none;
+  }
+
+  .divider2 {
+    display: none;
+  }
+
+  .photo-container {
+    display: block;
+    
+  }
+
+  .filter-section {
+    display: none;
+  }
+
+  #showAllButton {
+    display: none;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .secondSection {
+    display: none;
+  }
+
+  .column {
+    margin-left: 120px;
+  }
+
+  .custom-modal-dialog {
+    max-width: 600px;
+    width: 70%;
+  }
+
+  .modal-content {
+    height: 700px;
+    margin-left: 8%;
+  }
+}
+
